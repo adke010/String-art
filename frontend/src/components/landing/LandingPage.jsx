@@ -95,7 +95,7 @@ const TestimonialCard = ({ name, role, content, avatar, delay }) => (
         <Star key={i} size={16} className="fill-accent text-accent" />
       ))}
     </div>
-    <p className="text-muted-foreground mb-4 leading-relaxed">"{content}"</p>
+    <p className="text-muted-foreground mb-4 leading-relaxed">&ldquo;{content}&rdquo;</p>
     <div className="flex items-center gap-3">
       <div className="w-10 h-10 rounded-full bg-muted overflow-hidden">
         <img src={avatar} alt={name} className="w-full h-full object-cover" />
