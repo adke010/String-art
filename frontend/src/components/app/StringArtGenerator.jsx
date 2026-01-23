@@ -30,6 +30,13 @@ import { Badge } from '../ui/badge';
 import { Progress } from '../ui/progress';
 
 const StringArtGenerator = ({ onBack }) => {
+  // Handle back navigation
+  const handleBack = () => {
+    if (onBack && typeof onBack === 'function') {
+      onBack();
+    }
+  };
+  
   // --- Configuration States ---
   const [numLines, setNumLines] = useState(4000);
   const [numPins, setNumPins] = useState(288);
@@ -476,8 +483,9 @@ const StringArtGenerator = ({ onBack }) => {
             <Button 
               variant="ghost" 
               size="icon"
-              onClick={onBack}
+              onClick={handleBack}
               className="hover:bg-muted"
+              type="button"
             >
               <Home size={20} />
             </Button>
